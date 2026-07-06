@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Learn Conjugations…</title>
+
+  <script>
+    const appStore =
+      "https://apps.apple.com/us/app/learn-conjugations/id6742377639";
+
+    const playStore =
+      "https://play.google.com/store/apps/details?id=com.clement.conjugationapp&pcampaignid=web_share";
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(ua)) {
+      window.location.replace(playStore);
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      window.location.replace(appStore);
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      margin: 0;
+      padding: 24px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 12px;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>Learn Conjugations</h2>
+    <p>Choose your platform:</p>
+
+    <a href="https://apps.apple.com/us/app/learn-conjugations/id6742377639">
+      🍎 App Store
+    </a>
+
+    <a href="https://play.google.com/store/apps/details?id=com.clement.conjugationapp&pcampaignid=web_share">
+      🤖 Google Play
+    </a>
+  </div>
+</body>
+</html>
